@@ -1,0 +1,156 @@
+<svg viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="960" height="620" fill="#f4f6fb" rx="12"/>
+
+  <!-- Title -->
+  <rect x="30" y="22" width="380" height="46" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+  <text x="220" y="51" text-anchor="middle" font-size="20" font-weight="700" fill="#92400e">Star Schema — Gold Layer</text>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- CUSTOMER_DIM (left) -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="30" y="90" width="220" height="390" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <!-- Header -->
+  <rect x="30" y="90" width="220" height="36" rx="8" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <rect x="30" y="114" width="220" height="12" fill="#fde68a"/>
+  <text x="140" y="114" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">Customer_Dim</text>
+  <!-- PK badge -->
+  <rect x="38" y="136" width="26" height="16" rx="3" fill="#d97706"/>
+  <text x="51" y="148" text-anchor="middle" font-size="9" font-weight="700" fill="white">PK</text>
+  <text x="72" y="148" font-size="12" font-weight="600" fill="#1e293b">Customer_Key</text>
+  <!-- rows -->
+  <line x1="30" y1="158" x2="250" y2="158" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="174" font-size="11" fill="#475569">Customer_Id</text>
+  <line x1="30" y1="182" x2="250" y2="182" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="198" font-size="11" fill="#475569">Customer_Number</text>
+  <line x1="30" y1="206" x2="250" y2="206" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="222" font-size="11" fill="#475569">First_Name</text>
+  <line x1="30" y1="230" x2="250" y2="230" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="246" font-size="11" fill="#475569">Last_Name</text>
+  <line x1="30" y1="254" x2="250" y2="254" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="270" font-size="11" fill="#475569">Gender</text>
+  <line x1="30" y1="278" x2="250" y2="278" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="294" font-size="11" fill="#475569">Marital_Status</text>
+  <line x1="30" y1="302" x2="250" y2="302" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="318" font-size="11" fill="#475569">Country</text>
+  <line x1="30" y1="326" x2="250" y2="326" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="342" font-size="11" fill="#475569">Birth_Date</text>
+  <line x1="30" y1="350" x2="250" y2="350" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="38" y="366" font-size="11" fill="#475569">cst_create_date</text>
+  <line x1="30" y1="374" x2="250" y2="374" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- FACT_SALES (center) -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="360" y="90" width="240" height="390" rx="8" fill="#ffffff" stroke="#0e7490" stroke-width="2.5"/>
+  <!-- Header -->
+  <rect x="360" y="90" width="240" height="36" rx="8" fill="#a5f3fc" stroke="#0e7490" stroke-width="2.5"/>
+  <rect x="360" y="114" width="240" height="12" fill="#a5f3fc"/>
+  <text x="480" y="114" text-anchor="middle" font-size="13" font-weight="700" fill="#164e63">Fact_Sales</text>
+  <!-- SK badge for Order_Number -->
+  <rect x="368" y="136" width="26" height="16" rx="3" fill="#0e7490"/>
+  <text x="381" y="148" text-anchor="middle" font-size="9" font-weight="700" fill="white">SK</text>
+  <text x="402" y="148" font-size="12" font-weight="600" fill="#1e293b">Order_Number</text>
+  <!-- FK1 Customer_Key -->
+  <line x1="360" y1="158" x2="600" y2="158" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="368" y="162" width="26" height="16" rx="3" fill="#7c3aed"/>
+  <text x="381" y="174" text-anchor="middle" font-size="9" font-weight="700" fill="white">FK</text>
+  <text x="402" y="174" font-size="12" font-weight="600" fill="#1e293b">Customer_Key</text>
+  <!-- FK2 Product_Key -->
+  <line x1="360" y1="182" x2="600" y2="182" stroke="#e5e7eb" stroke-width="1"/>
+  <rect x="368" y="186" width="26" height="16" rx="3" fill="#7c3aed"/>
+  <text x="381" y="198" text-anchor="middle" font-size="9" font-weight="700" fill="white">FK</text>
+  <text x="402" y="198" font-size="12" font-weight="600" fill="#1e293b">Product_Key</text>
+  <!-- rows -->
+  <line x1="360" y1="206" x2="600" y2="206" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="368" y="222" font-size="11" fill="#475569">Order_Date</text>
+  <line x1="360" y1="230" x2="600" y2="230" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="368" y="246" font-size="11" fill="#475569">Ship_Date</text>
+  <line x1="360" y1="254" x2="600" y2="254" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="368" y="270" font-size="11" fill="#475569">Due_Date</text>
+  <line x1="360" y1="278" x2="600" y2="278" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="368" y="294" font-size="11" fill="#475569">Sales_Amount</text>
+  <line x1="360" y1="302" x2="600" y2="302" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="368" y="318" font-size="11" fill="#475569">Quantity</text>
+  <line x1="360" y1="326" x2="600" y2="326" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="368" y="342" font-size="11" fill="#475569">Price</text>
+  <line x1="360" y1="350" x2="600" y2="350" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- PRODUCT_DIM (right) -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="710" y="90" width="220" height="414" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+  <!-- Header -->
+  <rect x="710" y="90" width="220" height="36" rx="8" fill="#fde68a" stroke="#d97706" stroke-width="2"/>
+  <rect x="710" y="114" width="220" height="12" fill="#fde68a"/>
+  <text x="820" y="114" text-anchor="middle" font-size="13" font-weight="700" fill="#78350f">Product_Dim</text>
+  <!-- PK badge -->
+  <rect x="718" y="136" width="26" height="16" rx="3" fill="#d97706"/>
+  <text x="731" y="148" text-anchor="middle" font-size="9" font-weight="700" fill="white">PK</text>
+  <text x="752" y="148" font-size="12" font-weight="600" fill="#1e293b">Product_Key</text>
+  <!-- rows -->
+  <line x1="710" y1="158" x2="930" y2="158" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="174" font-size="11" fill="#475569">Product_Id</text>
+  <line x1="710" y1="182" x2="930" y2="182" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="198" font-size="11" fill="#475569">Product_Number</text>
+  <line x1="710" y1="206" x2="930" y2="206" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="222" font-size="11" fill="#475569">Product_Name</text>
+  <line x1="710" y1="230" x2="930" y2="230" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="246" font-size="11" fill="#475569">Category_Id</text>
+  <line x1="710" y1="254" x2="930" y2="254" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="270" font-size="11" fill="#475569">Sub_Category</text>
+  <line x1="710" y1="278" x2="930" y2="278" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="294" font-size="11" fill="#475569">Maintenance</text>
+  <line x1="710" y1="302" x2="930" y2="302" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="318" font-size="11" fill="#475569">Cost</text>
+  <line x1="710" y1="326" x2="930" y2="326" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="342" font-size="11" fill="#475569">Product_Line</text>
+  <line x1="710" y1="350" x2="930" y2="350" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="718" y="366" font-size="11" fill="#475569">Start_Date</text>
+  <line x1="710" y1="374" x2="930" y2="374" stroke="#e5e7eb" stroke-width="1"/>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- RELATIONSHIP LINES -->
+  <!-- Customer_Dim → Fact_Sales (at Customer_Key row, y=170) -->
+  <!-- ═══════════════════════════════ -->
+  <!-- Line from Customer_Dim right edge to Fact_Sales left edge -->
+  <line x1="250" y1="170" x2="360" y2="170" stroke="#7c3aed" stroke-width="2"/>
+  <!-- crow's foot at fact side (many) -->
+  <line x1="350" y1="163" x2="360" y2="170" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="350" y1="177" x2="360" y2="170" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="344" y1="163" x2="344" y2="177" stroke="#7c3aed" stroke-width="2"/>
+  <!-- one side circle at dim -->
+  <circle cx="253" cy="170" r="5" fill="none" stroke="#7c3aed" stroke-width="2"/>
+
+  <!-- Product_Dim → Fact_Sales (at Product_Key row, y=194) -->
+  <line x1="600" y1="194" x2="710" y2="194" stroke="#7c3aed" stroke-width="2"/>
+  <!-- crow's foot at fact side (many) -->
+  <line x1="608" y1="187" x2="600" y2="194" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="608" y1="201" x2="600" y2="194" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="614" y1="187" x2="614" y2="201" stroke="#7c3aed" stroke-width="2"/>
+  <!-- one side circle at dim -->
+  <circle cx="707" cy="194" r="5" fill="none" stroke="#7c3aed" stroke-width="2"/>
+
+  <!-- ═══════════════════════════════ -->
+  <!-- LEGEND -->
+  <!-- ═══════════════════════════════ -->
+  <rect x="30" y="510" width="560" height="82" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="44" y="532" font-size="11" font-weight="700" fill="#334155">LEGEND</text>
+
+  <rect x="44" y="542" width="22" height="14" rx="3" fill="#0e7490"/>
+  <text x="72" y="554" font-size="11" fill="#475569">SK — Surrogate Key (Fact)</text>
+
+  <rect x="44" y="562" width="22" height="14" rx="3" fill="#d97706"/>
+  <text x="72" y="574" font-size="11" fill="#475569">PK — Primary Key (Dimension)</text>
+
+  <rect x="230" y="542" width="22" height="14" rx="3" fill="#7c3aed"/>
+  <text x="258" y="554" font-size="11" fill="#475569">FK — Foreign Key</text>
+
+  <circle cx="241" cy="572" r="5" fill="none" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="246" y1="572" x2="268" y2="572" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="260" y1="566" x2="268" y2="572" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="260" y1="578" x2="268" y2="572" stroke="#7c3aed" stroke-width="2"/>
+  <line x1="266" y1="566" x2="266" y2="578" stroke="#7c3aed" stroke-width="2"/>
+  <text x="276" y="576" font-size="11" fill="#475569">One-to-Many relationship</text>
+</svg>
