@@ -1,4 +1,4 @@
-CREATE VIEW gold.Dim_Customer AS
+CREATE VIEW gold.Customer_Dim AS
 SELECT 
 ROW_NUMBER() OVER(ORDER BY cst_id) AS Customer_Key,
 ci.cst_id AS Customer_ID,
@@ -9,7 +9,9 @@ CASE WHEN ci.cst_gndr!= 'UNKOWN' THEN ci.cst_gndr --assuming cust_gndr is the ma
 ELSE COALESCE(ca.GEN,'N/A')
 END AS Gender,
 ci.cst_martial_status AS Maritial_Status,
-la.CNTRY AS Country,
+CASE WHEN la.CNTRY IS NULL THEN 'N/A'
+ELSE la.CNTRY 
+END AS Country,
 ca.BDATE AS Birth_Date,
 ci.cst_create_date
 FROM silver.CRM_cust_info AS ci
